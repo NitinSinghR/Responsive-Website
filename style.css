@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+
+body{
+    background: rgb(72, 17, 32);
+}
+
+.foot{
+    background-color:  #1b1b1b;
+    height:100px;
+    text-align: center;
+    padding-top: 30px;
+}
+.foot p{
+    color: #f2f2f2;
+}
+.img-gallery,.img-gallery2{
+    width:80%;
+    margin:50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 30px;   
+}
+
+img{
+    width:100%;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px rgba(0,0,0.06) ;
+}
+
+h1{
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+}
+h2{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 32px;
+}
+
+p{
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(33, 15, 15);
+}
+
+header,footer{
+    position: absolute;
+    width:100%;
+}
+header{
+    height:10vh;
+}
+footer{
+    height: 15vh;
+    bottom: 0;
+}
+
+footer p{
+    position: absolute;
+    left:50%;
+    bottom:20px
+}
+
+nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: #1b1b1b;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0 10px;
+    flex-wrap: wrap;
+  }
+  nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  nav ul li{
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  @media (max-width: 1000px){
+    nav{
+      padding: 0 40px 0 50px;
+    }
+  }
+  @media (max-width: 920px) {
+    nav .menu-btn i{
+      display: block;
+    }
+    nav ul{
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background: #111;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    nav ul li{
+      width: 100%;
+      margin: 40px 0;
+    }
+    nav ul li a{
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    nav h1{
+        font-size: 18px;
+    }
+  }
